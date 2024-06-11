@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Channels;
 using Xadrezgame.tabuleiro;
 
 namespace Xadrezgame
@@ -19,6 +20,8 @@ namespace Xadrezgame
 
                 }
             }
+            Console.WriteLine();
         }
+
     }
 }

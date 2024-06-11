@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xadrezgame.tabuleiro;
 
 namespace Xadrezgame.tabuleiro
 {
-    enum Cor
+    internal class TabuleiroException : Exception
     {
-        Branca,
-        Preta,
+        public TabuleiroException(string msg) : base(msg) 
+        { 
+  
+        }
     }
 }
