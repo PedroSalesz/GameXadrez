@@ -1,0 +1,5 @@
+C:\Users\pedro\Desktop\XadrezGame\Xadrezgame\Xadrezgame\obj\Debug\net8.0\Xadrezgame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Desktop\XadrezGame\Xadrezgame\Xadrezgame\obj\Debug\net8.0\Xadrezgame.AssemblyInfoInputs.cache
+C:\Users\pedro\Desktop\XadrezGame\Xadrezgame\Xadrezgame\obj\Debug\net8.0\Xadrezgame.AssemblyInfo.cs
+C:\Users\pedro\Desktop\XadrezGame\Xadrezgame\Xadrezgame\obj\Debug\net8.0\Xadrezgame.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\XadrezGame\Xadrezgame\Xadrezgame\obj\Debug\net8.0\Xadrezgame.sourcelink.json
