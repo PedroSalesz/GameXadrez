@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xadrezgame.tabuleiro;
 
-namespace Xadrezgame.tabuleiro
+namespace tabuleiro
 {
-    internal class Tabuleiro
+    class Tabuleiro
     {
+
         public int linhas { get; set; }
         public int colunas { get; set; }
         private Peca[,] pecas;
@@ -24,23 +26,22 @@ namespace Xadrezgame.tabuleiro
             return pecas[linha, coluna];
         }
 
-        public bool existePeca(Posicao pos) 
-        { 
-          validarPosicao(pos);
-            return peca(pos) != null;
-        }
-
-
         public Peca peca(Posicao pos)
         {
             return pecas[pos.linha, pos.coluna];
+        }
+
+        public bool existePeca(Posicao pos)
+        {
+            validarPosicao(pos);
+            return peca(pos) != null;
         }
 
         public void colocarPeca(Peca p, Posicao pos)
         {
             if (existePeca(pos))
             {
-                throw new TabuleiroException("Já existe uma peça nessa posição");
+                throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
             pecas[pos.linha, pos.coluna] = p;
             p.posicao = pos;
@@ -48,7 +49,7 @@ namespace Xadrezgame.tabuleiro
 
         public Peca retirarPeca(Posicao pos)
         {
-            if (peca(pos) == null) 
+            if (peca(pos) == null)
             {
                 return null;
             }
@@ -64,7 +65,6 @@ namespace Xadrezgame.tabuleiro
             {
                 return false;
             }
-
             return true;
         }
 

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Xadrezgame.tabuleiro
+namespace tabuleiro
 {
-    internal class Posicao
+    class Posicao
     {
-        public int linha  { get; set; }
+
+        public int linha { get; set; }
         public int coluna { get; set; }
 
         public Posicao(int linha, int coluna)
@@ -25,7 +26,9 @@ namespace Xadrezgame.tabuleiro
 
         public override string ToString()
         {
-            return linha + ", " + coluna;
+            return linha
+                + ", "
+                + coluna;
         }
     }
 }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xadrezgame.tabuleiro;
 
-namespace Xadrezgame.tabuleiro
+namespace tabuleiro
 {
     abstract class Peca
     {
@@ -14,18 +15,12 @@ namespace Xadrezgame.tabuleiro
         public int qteMovimentos { get; protected set; }
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Cor cor, Tabuleiro tab)
-        {
-            this.posicao = null;
-            this.cor = cor;
-            this.qteMovimentos = 0;
-            this.tab = tab;
-        }
-
         public Peca(Tabuleiro tab, Cor cor)
         {
+            this.posicao = null;
             this.tab = tab;
             this.cor = cor;
+            this.qteMovimentos = 0;
         }
 
         public void incrementarQteMovimentos()
@@ -33,9 +28,32 @@ namespace Xadrezgame.tabuleiro
             qteMovimentos++;
         }
 
-        public abstract bool[,] movimentosPossiveis()
+        public void decrementarQteMovimentos()
         {
-
+            qteMovimentos--;
         }
+
+        public bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = movimentosPossiveis();
+            for (int i = 0; i < tab.linhas; i++)
+            {
+                for (int j = 0; j < tab.colunas; j++)
+                {
+                    if (mat[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool movimentoPossivel(Posicao pos)
+        {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
+        }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }

@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tabuleiro;
 using Xadrezgame.tabuleiro;
 
-namespace Xadrezgame.xadrez
+namespace xadrez
 {
-    internal class PosicaoXadrez
+    class PosicaoXadrez
     {
-        public char coluna {  get; set; }
+
+        public char coluna { get; set; }
         public int linha { get; set; }
 
         public PosicaoXadrez(char coluna, int linha)

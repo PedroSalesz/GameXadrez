@@ -11,5 +11,10 @@ namespace Xadrezgame.tabuleiro
     {
         Branca,
         Preta,
+        Amarela,
+        Azul,
+        Vermelha,
+        Verde,
+        Laranja
     }
 }
