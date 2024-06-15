@@ -3,7 +3,7 @@ using System.Numerics;
 using System.Runtime.ConstrainedExecution;
 using tabuleiro;
 using Xadrezgame.tabuleiro;
-using Xadrezgame.xadrez;
+using Xadrezgame;
 
 namespace xadrez
 {
